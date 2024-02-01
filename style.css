@@ -1,0 +1,120 @@
+body {
+    text-align: center;
+    background-color: antiquewhite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.playerchoice img {
+    width: 100px;
+    height: 100px;
+    margin-top: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.playagain button {
+    padding: 4px;
+    width: 75px;
+    border: 3px solid;
+    border-radius: 4px;
+}
+
+a {
+    text-decoration: none;
+    color: aqua;
+    padding-left: 6px;
+}
+
+#rock, #paper, #scissor {
+    padding: 0;
+    border: solid 4px;
+    border-radius: 10px;
+}
+
+p {
+    font-size: large;
+    font-weight: 500;
+    margin: 0px;
+}
+
+h1 {
+    margin: 8px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    flex-shrink: 0;
+    border-bottom: solid 4px;
+    padding-bottom: 10px;
+}
+
+.playerchoice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 350px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    
+}
+
+.buttonWithDiscription {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.scores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    padding: 30px;
+    gap: 70px;
+    min-height: 40px;
+    flex-shrink: 0;
+}
+
+.end {
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.playagain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    flex-shrink: 0;
+    background-color: black;
+    color: antiquewhite;
+}
