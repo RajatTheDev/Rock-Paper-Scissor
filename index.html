@@ -4,9 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissor</title>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+
+    <div class="header">
+        <h1>Rock, Paper and Scissor</h1>
+        <p>First to 5 wins will win the game!</p>
+    </div>
+
+    <div class="playerchoice">
+
+        <div class="buttonWithDiscription">
+
+            <button id="rock" value="rock"><img src="images/rock.png" alt="rock"></button>
+            <div class="discription">
+                <p>Rock</p>
+            </div>
+
+        </div>
+
+        <div class="buttonWithDiscription">
+
+            <button id="paper" value="paper"><img src="images/paper.png" alt="paper"></button>
+            <div class="discription">
+                <p>Paper</p>
+            </div>
+
+        </div>
+            
+        <div class="buttonWithDiscription">
+
+            <button id="scissor" value="scissor"><img src="images/scissor.png" alt=""></button>
+            <div class="discription">
+                <p>Scissor</p>
+            </div>
+
+        </div>
+            
+    </div>
     
+    <div class="scores">
+
+        <div id="player">
+            <p>Player Score </p>
+            <div class="playerScore">
+                0
+            </div>
+        </div>
+    
+        <div id="computer">
+            <p>Computer Score</p> 
+            <div class="computerScore">
+                0
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="end">
+        <div class="result">
+            <p>Result</p>
+            <div class="winner">
+                -
+            </div>
+        </div>
+    
+        <div class="playagain">
+            <p>Play Again</p> 
+            <button value="reset">Restart</button>
+        </div>
+
+    </div>
+    
+
+    <div class="footer">
+        Made with ❤️ by <a href="https://github.com/RajatTheDev" target="_blank">Rajat</a>
+    </div>
+
 </body>
 </html>
