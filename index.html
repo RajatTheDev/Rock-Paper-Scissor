@@ -16,31 +16,43 @@
 
     <div class="playerchoice">
 
-        <div class="buttonWithDiscription">
+        <div class="buttons">
+            <div class="buttonWithDiscription">
 
-            <button id="rock" value="rock"><img src="images/rock.png" alt="rock"></button>
-            <div class="discription">
-                <p>Rock</p>
+                <button id="rock" value="rock"><img src="images/rock.png" alt="rock"></button>
+                <div class="discription">
+                    <p>Rock</p>
+                </div>
+    
             </div>
-
+    
+            <div class="buttonWithDiscription">
+    
+                <button id="paper" value="paper"><img src="images/paper.png" alt="paper"></button>
+                <div class="discription">
+                    <p>Paper</p>
+                </div>
+    
+            </div>
+                
+            <div class="buttonWithDiscription">
+    
+                <button id="scissor" value="scissor"><img src="images/scissor.png" alt=""></button>
+                <div class="discription">
+                    <p>Scissor</p>
+                </div>
+    
+            </div>
         </div>
-
-        <div class="buttonWithDiscription">
-
-            <button id="paper" value="paper"><img src="images/paper.png" alt="paper"></button>
-            <div class="discription">
-                <p>Paper</p>
+        
+        <div class="choice">
+            <div class="display-choice">
+                <p>Player chose: <span class="player-decision"></span></p>
             </div>
-
-        </div>
-            
-        <div class="buttonWithDiscription">
-
-            <button id="scissor" value="scissor"><img src="images/scissor.png" alt=""></button>
-            <div class="discription">
-                <p>Scissor</p>
+    
+            <div class="display-choice">
+                <p>Computer chose: <span class="computer-decision"></span></p>
             </div>
-
         </div>
             
     </div>
@@ -48,32 +60,22 @@
     <div class="scores">
 
         <div id="player">
-            <p>Player Score </p>
-            <div class="player-score">
-                0
-            </div>
+            <p>Player Score: <span class="player-score">0</span></p>
         </div>
     
         <div id="computer">
-            <p>Computer Score</p> 
-            <div class="computer-score">
-                0
-            </div>
+            <p>Computer Score: <span class="computer-score">0</span></p> 
         </div>
 
     </div>
     
     <div class="end">
         <div class="result">
-            <p>Result</p>
-            <div class="winner">
-                -
-            </div>
+            <p>Result: <span class="winner">-</span></p>
         </div>
     
         <div class="playagain">
-            <p>Play Again</p> 
-            <button id="restart" value="restart">Restart</button>
+            <p>Play Again: <button id="restart" value="restart">Restart</button></p>
         </div>
 
     </div>
