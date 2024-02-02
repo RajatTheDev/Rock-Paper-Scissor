@@ -24,28 +24,34 @@ function computerSelection() {
 
 rockButton.addEventListener('click', function player() {
 
-    playerChoice = rockButton.value;
-    computerSelection()
-    playRound(playerChoice, computerSelection)
-    return playerChoice
+    if (playerScore.textContent < 5 && computerScore.textContent < 5) {
+        playerChoice = rockButton.value;
+        computerSelection();
+        playRound(playerChoice, computerSelection);
+        return playerChoice;
+    }
 
 });
     
 paperButton.addEventListener('click', function player() {
 
-    playerChoice = paperButton.value;
-    computerSelection()
-    playRound(playerChoice, computerSelection)
-    return playerChoice
+    if (playerScore.textContent < 5 && computerScore.textContent < 5) {
+        playerChoice = paperButton.value;
+        computerSelection();
+        playRound(playerChoice, computerSelection);
+        return playerChoice;
+      }
 
 });
     
 scissorButton.addEventListener('click', function player() {
 
-    playerChoice = scissorButton.value;
-    computerSelection()
-    playRound(playerChoice, computerSelection)
-    return playerChoice
+    if (playerScore.textContent < 5 && computerScore.textContent < 5) {
+        playerChoice = scissorButton.value;
+        computerSelection();
+        playRound(playerChoice, computerSelection);
+        return playerChoice;
+    }
 
 });
 
@@ -64,21 +70,23 @@ function choicesMade() {
 function playRound() {
 
     if (computerChoice === playerChoice) {
-        result.innerText = "Tied! Play again.";
+        result.textContent = "Tied! Play again.";
         choicesMade();
     }
 
     else if ((computerChoice === 'rock' && playerChoice === 'paper') || (computerChoice === 'scissor' && playerChoice === 'rock') || (computerChoice === 'paper' && playerChoice === 'scissor')) {
-        result.innerText = "You won the round!";
-        playerScore.innerHTML = 1 + parseInt(playerScore.innerHTML);
+        result.textContent = "You won the round!";
+        playerScore.textContent++;
         choicesMade();
     }
 
     else if ((computerChoice === 'paper' && playerChoice === 'rock') || (computerChoice === 'rock', playerChoice === 'scissor') || (computerChoice === 'scissor' && playerChoice === 'paper')) {
-        result.innerText = "You lost the round";
-        computerScore.innerHTML = 1 + parseInt(computerScore.innerHTML);
+        result.textContent = "You lost the round";
+        computerScore.textContent++;
         choicesMade();
     }
+
+    checkWinner();
     
 }
 
@@ -97,24 +105,13 @@ function deactivateButtons() {
 function checkWinner() {
 
     if (parseInt(playerScore.innerHTML) === 5) {
-        result.innerHTML = "You are the winner of game!";
+        result.textContent = "You are the winner of game!";
         deactivateButtons();
     }
 
     else if (parseInt(computerScore.innerHTML) === 5) {
-        result.innerHTML = "Computer won the game!";
+        result.textContent = "Computer won the game!";
         deactivateButtons();
     }
 
 }
-
-function game() {
-    if(computerScore < 5 && playerScore < 5) {
-        playRound()
-    }
-    else {
-        checkWinner();
-    }
-}
-
-game()
