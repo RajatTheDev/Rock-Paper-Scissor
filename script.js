@@ -58,7 +58,6 @@ playAgain.addEventListener('click', () => {
 
 function playRound() {
 
-
     if (parseInt(playerScore.innerHTML) === 5) {
         result.innerHTML = "You are the winner of game!";
         rockButton.removeEventListener('click');
