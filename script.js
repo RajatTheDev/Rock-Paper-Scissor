@@ -1,5 +1,6 @@
 let computerChoice;
 let playerChoice;
+let choices = ["rock", "paper", "scissor"];
 
 const playerScore = document.querySelector(".player-score");
 const computerScore = document.querySelector(".computer-score")
@@ -11,18 +12,9 @@ const playAgain = document.querySelector("#restart")
 
 function computerSelection() {
 
-    computerChoice = Math.floor(Math.random() * 3) + 1;
-
-    if (computerChoice === 1) {
-        computerChoice = 'rock';
-    }
-    else if (computerChoice === 2) {
-        computerChoice = 'paper';
-    }
-    else {
-        computerChoice = 'scissor';
-    }
-
+    computerChoice = Math.floor(Math.random() * 3);
+    computerChoice =  choices[computerChoice];
+    
     return computerChoice;
 
 }
