@@ -13,15 +13,6 @@ const playAgain = document.querySelector("#restart");
 const playerDecision = document.querySelector(".player-decision");
 const computerDecision = document.querySelector(".computer-decision");
 
-function computerSelection() {
-
-    computerChoice = Math.floor(Math.random() * 3);
-    computerChoice =  choices[computerChoice];
-
-    return computerChoice;
-
-}
-
 rockButton.addEventListener('click', function player() {
 
     if (playerScore.textContent < 5 && computerScore.textContent < 5) {
@@ -56,8 +47,23 @@ scissorButton.addEventListener('click', function player() {
 });
 
 playAgain.addEventListener('click', () => {
-    document.location.reload(true);
+    result.textContent = "-";
+    result.setAttribute("style", "background-color: antique-white;")
+    playerScore.textContent = 0;
+    computerScore.textContent = 0;
+    playerDecision.textContent = "";
+    computerDecision.textContent = "";
+
 });
+
+function computerSelection() {
+
+    computerChoice = Math.floor(Math.random() * 3);
+    computerChoice =  choices[computerChoice];
+
+    return computerChoice;
+
+}
 
 function choicesMade() {
 
@@ -90,28 +96,16 @@ function playRound() {
     
 }
 
-function deactivateButtons() {
-    rockButton.removeEventListener('click', () => {
-
-    });
-    scissorButton.removeEventListener('click', () => {
-
-    });
-    paperButton.removeEventListener('click', () => {
-
-    });
-}
-
 function checkWinner() {
 
     if (parseInt(playerScore.innerHTML) === 5) {
         result.textContent = "You are the winner of game!";
-        deactivateButtons();
+        result.setAttribute("style", "background-color: lightgreen;")
     }
 
     else if (parseInt(computerScore.innerHTML) === 5) {
         result.textContent = "Computer won the game!";
-        deactivateButtons();
+        result.setAttribute("style", "background-color: red;")
     }
 
 }
