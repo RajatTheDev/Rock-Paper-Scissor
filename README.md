@@ -12,6 +12,7 @@ Hey there! Welcome to this Rock, Paper, Scissors game! It's you versus the compu
   - [What I learned](#what-i-learned)
 - [Getting Started](#getting-started)
 - [Acknowledgments](#acknowledgments)
+- [License](#license)
 
 ## Overview
 
@@ -58,3 +59,7 @@ To explore the Rock, Paper, Scissors game:
 
 - Images provided by [Flaticon](https://www.flaticon.com/)
 - I received valuable assistance from my friend [Ravn](https://github.com/idevRavn) in resolving an issue.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE), allowing for collaboration and sharing.
