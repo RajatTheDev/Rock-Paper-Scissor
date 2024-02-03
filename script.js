@@ -76,7 +76,7 @@ function choicesMade() {
 function playRound() {
 
     if (computerChoice === playerChoice) {
-        result.textContent = "Tied! Play again.";
+        result.textContent = "It's a tie!";
         choicesMade();
     }
 
@@ -87,7 +87,7 @@ function playRound() {
     }
 
     else if ((computerChoice === 'paper' && playerChoice === 'rock') || (computerChoice === 'rock', playerChoice === 'scissor') || (computerChoice === 'scissor' && playerChoice === 'paper')) {
-        result.textContent = "You lost the round";
+        result.textContent = "Computer won the round!";
         computerScore.textContent++;
         choicesMade();
     }
